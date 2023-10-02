@@ -17,13 +17,13 @@ function onAccessApproved(stream){
         let formData = new FormData();
         formData.append('title', 'GafrecordedBlob')
         formData.append('video_file', recordedBlob, 'myvideo.webm')
-        let response = await fetch('https://screenrecording.ifeoluwaadefioy.repl.co/app/api/screen-recordings/?format=api', {
+        let response = await fetch('', {
             method: 'POST',
             body: formData
         })
         if (response.status === 201){
             console.log('Message', response)
-            let getURL = await fetch('https://screenrecording.ifeoluwaadefioy.repl.co/app/api/screenrecordings/?format=api', {
+            let getURL = await fetch('', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
