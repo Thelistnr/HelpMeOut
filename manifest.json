@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "HMO",
+    "description": "Help Me Out Screen Recording Extension",
+    "icons": {
+        "16": "./HMO-Logo.png",
+        "32": "./HMO-Logo.png",
+        "48": "./HMO-Logo.png",
+        "128": "HMO-Logo.png"
+    },
+
+    "background": {
+        "service_worker": "background.js"
+    },
+
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "HMO-Logo.png"
+    },
+
+    "host_permissions": [
+        "http://*/",
+        "https://*/*"
+    ],
+
+    "permissions": [
+        "scripting",
+        "tabs",
+        "activeTab"
+    ],
+    "version": "1.0.0"
+}
